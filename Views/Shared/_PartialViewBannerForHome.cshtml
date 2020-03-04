@@ -1,0 +1,19 @@
+﻿@model mizgindogancom.ViewModels.HomeViewModel;
+<!-- Breadcrumbs Start -->
+<div class="rs-breadcrumbs sec-color">
+    <div class="breadcrumbs-image">
+        <img src="@Model.AllImages.ElementAt(8).Url" alt="@Model.AllImages.ElementAt(8).Name">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title">@Model.Location</h1>
+                    <ul class="breadcrumbs-subtitle">
+                        <li><a asp-controller="Home" asp-action="Index">ANASAYFA</a></li>
+                        <li>@Model.Location</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->

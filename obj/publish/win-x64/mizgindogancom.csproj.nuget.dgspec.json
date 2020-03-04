@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\90507\\Desktop\\Yazılım\\Projects\\Coorporate\\mizgindogan2.1\\mizgindogancom\\mizgindogancom.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\90507\\Desktop\\Yazılım\\Projects\\Coorporate\\mizgindogan2.1\\mizgindogancom\\mizgindogancom.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\90507\\Desktop\\Yazılım\\Projects\\Coorporate\\mizgindogan2.1\\mizgindogancom\\mizgindogancom.csproj",
+        "projectName": "mizgindogancom",
+        "projectPath": "C:\\Users\\90507\\Desktop\\Yazılım\\Projects\\Coorporate\\mizgindogan2.1\\mizgindogancom\\mizgindogancom.csproj",
+        "packagesPath": "C:\\Users\\90507\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\90507\\Desktop\\Yazılım\\Projects\\Coorporate\\mizgindogan2.1\\mizgindogancom\\obj\\publish\\win-x64\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\90507\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.9, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.9, )",
+              "autoReferenced": true
+            },
+            "Sakura.AspNetCore.Mvc.PagedList": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            },
+            "Sakura.AspNetCore.PagedList": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Sakura.AspNetCore.PagedList.Abstractions": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Sakura.AspNetCore.PagedList.Async": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

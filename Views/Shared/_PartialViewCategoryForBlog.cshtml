@@ -1,0 +1,22 @@
+﻿
+@model mizgindogancom.ViewModels.BlogViewModel;
+@using System.Globalization;
+
+@{
+    Layout = null;
+}
+<div class="cate-box">
+    <h4 class="title">Kategoriler</h4>
+    <ul>
+        @foreach (var item in Model.EntriesAll.Select(x => x.Category).Distinct())
+        {
+            <li>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <a asp-action="CategoryFilter" asp-route-category="@item">
+                    @item
+                    <span>(@Model.EntriesAll.Where(x => x.Category == item).Count())</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div><!-- .cate-box end -->

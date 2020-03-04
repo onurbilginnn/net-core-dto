@@ -1,0 +1,227 @@
+﻿@model mizgindogancom.ViewModels.HomeViewModel;
+@{
+    ViewData["Title"] = "Hakkımızda | Mizgin Doğan Hukuk";
+}
+
+
+<partial name="_PartialViewBannerForHome" model="Model" />
+
+<!-- About Lawyer Start -->
+<div id="rs-about-lawyer" class="rs-about-lawyer pt-100 pb-100">
+    <div class="container">
+        <div class="about-inner about-right-bg">
+            <div class="row rs-vertical-middle">
+                <div class="col-lg-6">
+                    <div class="about-bg"><img src="images/bg/about-bg2.jpg" alt=""></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-style2">
+                        <div class="rs-heading-style3">
+                            <h4>BİZ KİMİZ</h4>
+                            <h2>Hakkımızda </h2>
+                        </div>
+                        <p class="des  text-justify">
+                            Müvekkil odaklı olan hukuk büromuz, vekil olarak temsil ettiği tüm dosyalar da şeffaf olup davaların seyri hakkında müvekkillerini sürekli bilgilendirmektedir. Deneyimli, dinamik ve genç kadrosuyla Mizgin Hukuk Bürosu güncel olan değişiklikleri yakından takip etmekte, vekalet aldığı tüm müvekkillerine ilgili oldukları düzenlemeleri aktarmaktadır. Bunun yanı sıra, müvekkillerin taraf oldukları uyuşmazlık konularında doğru stratejiyi belirleyen hukuk büromuz öncelikli olarak uzlaşma-alternatif çözüm yollarına başvurmakta, uzlaşmanın mümkün olmadığı durumlarda ise gerekli olan hukuki talep ve dava yollarına başvurarak müvekkillerinin menfaatini gözetmektedir.<div class="service-call mt-45">
+    <div class="service-call pb-100 mt-45">
+                    <h4>Sorularınız için lütfen arayınız.</h4>
+        <ul>
+            <li><a href="tel:@Model.Info.Tel1">@Model.Info.Tel1</a></li>
+
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Lawyer End -->
+<!-- free Consultation Start -->
+<partial name="_PartialViewFreeConsultMain" model="Model" />
+<!-- Free Consultation End -->
+<!-- Testimonia Section Start -->
+<div class="testimonia-section nagetive-gap">
+    <div class="container">
+        <div class="testimonials-inner testi-inner-bg text-center pt-100 pb-100">
+            <div class="slider-for">
+                <div class="item">
+                    <p>In 1972, one source indicated that no such definition could be produced McCoubrey and White said that the question. one source indicated that no such definition could be produced McCoubrey and White said that the question There have been several attempts to produce "a universally acceptable definition of law. </p>
+                    <div class="author-info">
+                        <h4 class="name">Andrew</h4>
+                        <span>Criminal Law</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>There have been several attempts to produce "a universally acceptable definition of law. In 1972, one source indicated that no such definition could be produced McCoubrey and White said that the question. one source indicated that no such definition could be produced McCoubrey and White said that the question</p>
+                    <div class="author-info">
+                        <h4 class="name">Jennings</h4>
+                        <span>Property Law</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>In 1972, one source indicated that no such definition could be produced McCoubrey and White said that the question. one source indicated that no such definition could be produced McCoubrey and White said that the question There have been several attempts to produce "a universally acceptable definition of law. </p>
+                    <div class="author-info">
+                        <h4 class="name">William</h4>
+                        <span>Business Law</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>There have been several attempts to produce "a universally acceptable definition of law. In 1972, one source indicated that no such definition could be produced McCoubrey and White said that the question. one source indicated that no such definition could be produced McCoubrey and White said that the question</p>
+                    <div class="author-info">
+                        <h4 class="name">Istic Bro</h4>
+                        <span>Traffic Law</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>In 1972, one source indicated that no such definition could be produced McCoubrey and White said that the question. one source indicated that no such definition could be produced McCoubrey and White said that the question There have been several attempts to produce "a universally acceptable definition of law. </p>
+                    <div class="author-info">
+                        <h4 class="name">Pravas Raw</h4>
+                        <span>Family Law</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="item">
+                    <img src="images/testimonial/1.jpg" alt="image" draggable="false" />
+                </div>
+                <div class="item">
+                    <img src="images/testimonial/2.jpg" alt="image" draggable="false" />
+                </div>
+                <div class="item">
+                    <img src="images/testimonial/3.jpg" alt="image" draggable="false" />
+                </div>
+                <div class="item">
+                    <img src="images/testimonial/4.jpg" alt="image" draggable="false" />
+                </div>
+                <div class="item">
+                    <img src="images/testimonial/5.jpg" alt="image" draggable="false" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonia Section End -->
+<!-- Team Inner Section Start -->
+<div id="rs-team" class="rs-team-slider2 rs-team-slider pt-100 pb-100">
+    <div class="rs-heading-style3 text-center">
+        <h4 class="sub-title top-line primary">EKİBİMİZ</h4>
+        <h2 class="title">AVUKATLAR</h2>
+    </div>
+    <div class="container">
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="20" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="4" data-md-device-nav="false" data-md-device-dots="false">
+            <div class="team-item">
+                <div class="team-image">
+                    <img src="@Model.AllImages.ElementAt(16).Url" alt="@Model.AllImages.ElementAt(16).Name">
+                    <div class="team-content">
+                        <div class="text-box">
+                            <a class="image-popup" href="@Model.AllImages.ElementAt(16).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                            <div class="team-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dark-bg">
+                    <h4 class="person-name"><a>@Model.AllImages.ElementAt(16).Name</a></h4>
+                    <span class="designation">Bankruptcy Lawyer</span>
+                </div>
+            </div>
+            <div class="team-item">
+                <div class="team-image">
+                    <img src="@Model.AllImages.ElementAt(17).Url" alt="@Model.AllImages.ElementAt(17).Name">
+                    <div class="team-content">
+                        <div class="text-box">
+                            <a class="image-popup" href="@Model.AllImages.ElementAt(17).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                            <div class="team-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dark-bg">
+                    <h4 class="person-name"><a>@Model.AllImages.ElementAt(17).Name</a></h4>
+                    <span class="designation">Trial Lawyer</span>
+                </div>
+            </div>
+            <div class="team-item">
+                <div class="team-image">
+                    <img src="@Model.AllImages.ElementAt(18).Url" alt="@Model.AllImages.ElementAt(18).Name">
+                    <div class="team-content">
+                        <div class="text-box">
+                            <a class="image-popup" href="@Model.AllImages.ElementAt(18).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                            <div class="team-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dark-bg">
+                    <h4 class="person-name"><a>@Model.AllImages.ElementAt(18).Name</a></h4>
+                    <span class="designation">Government Lawyer</span>
+                </div>
+            </div>
+            <div class="team-item">
+                <div class="team-image">
+                    <img src="@Model.AllImages.ElementAt(19).Url" alt="@Model.AllImages.ElementAt(19).Name">
+                    <div class="team-content">
+                        <div class="text-box">
+                            <a class="image-popup" href="@Model.AllImages.ElementAt(19).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                            <div class="team-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dark-bg">
+                    <h4 class="person-name"><a>@Model.AllImages.ElementAt(19).Name</a></h4>
+                    <span class="designation">Toxic Tort Lawyer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team Inner Section End -->
+<!-- Partner Start -->
+<div id="rs-defult-partner" class="rs-defult-partner sec-color pt-100 pb-100">
+    <div class="container">
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="true" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="true" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="true" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/1.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/2.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/3.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/4.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/5.png" alt="Partner Image"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Partner End -->

@@ -1,0 +1,32 @@
+﻿
+@model mizgindogancom.ViewModels.BlogViewModel;
+@using System.Globalization;
+
+@{
+    Layout = null;
+}
+    <div class="latest-post">
+        <h4 class="title">Son Yazılar</h4>
+        @foreach (var recent in Model.EntriesRecent)
+        {
+            DateTime dateRecent = Convert.ToDateTime(recent.Date);
+    <div class="post-item">
+        <div class="post-img">
+            <a asp-action="Details" asp-route-id="@recent.Id"><img src="@recent.ImageUrlSmall" alt="" title="@recent.Header"></a>
+        </div>
+
+        <div class="post-desc">
+            <h6><a asp-action="Details" asp-route-id="@recent.Id">@recent.Header</a></h6>
+            <span class="duration">
+                @recent.PostedBy
+            </span>
+            <span class="date">
+                @dateRecent.ToString("MMMMM yyyy",
+   CultureInfo.CreateSpecificCulture("tr-TR"))
+            </span>
+        </div>  
+    </div><!-- .post-item end -->
+          
+        }
+
+    </div>

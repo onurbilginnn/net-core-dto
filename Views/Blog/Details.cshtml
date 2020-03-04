@@ -1,0 +1,299 @@
+﻿@model mizgindogancom.ViewModels.BlogViewModel
+@using System.Globalization;
+
+@{
+    ViewData["Title"] = Model.Entry.Header + " | Mizgin Doğan Hukuk";
+    DateTime entryDate = Convert.ToDateTime(@Model.Entry.Date);
+    int nextPostId = 0, prevPostId = 0;
+    for (int i = 1; i <= Model.EntriesAll.Count; i++)
+    {
+        nextPostId = Model.Entry.Id;
+        nextPostId += i;
+        if (Model.EntriesAll.Any(x => x.Id == nextPostId))
+        {
+            break;
+        }
+    }
+    for (int j = 1; j <= Model.EntriesAll.Count; j++)
+    {
+        prevPostId = Model.Entry.Id;
+        prevPostId -= j;
+        if (Model.EntriesAll.Any(x => x.Id == prevPostId))
+        {
+            break;
+        }
+    }
+
+}
+
+<!-- Breadcrumbs Start -->
+<div class="rs-breadcrumbs sec-color">
+    <div class="breadcrumbs-image">
+        <img src="@Model.AllImages.ElementAt(8).Url" alt="@Model.AllImages.ElementAt(8).Name">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="breadcrumbs-text">
+                    <h1 class="breadcrumbs-title">@Model.Location</h1>
+                    <ul class="breadcrumbs-subtitle">
+                        <li><a asp-controller="Home" asp-action="Index">ANASAYFA</a></li>
+                        <li><a asp-controller="Blog" asp-action="BlogList">@Model.Location</a></li>
+                        <li>@Model.Entry.Header</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
+<div id="blog-loading-container">
+    <div id="send-mail-loading">
+    </div>
+</div>
+<!-- Blog Section Start -->
+<div id="rs-blog" class="rs-blog-single pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 pr-25 mb-md-50">
+                <div class="blog-item">
+                    <div class="blog-bottom">
+
+                        <div class="blog-image">
+                            <img src="@Model.Entry.ImageUrlLarge" alt="@Model.Entry.Header">
+                            <div class="date">
+                                @entryDate.ToString("dd MMMMM yyyy",
+                            CultureInfo.CreateSpecificCulture("tr-TR"))
+                            </div>
+                        </div>
+                        <div class="blog-top">
+                            <div class="blog-title">
+                                @*<h1 class="title">@Model.Entry.Header</h1>*@
+                                <h4>
+                                    <i class="fa fa-book"></i>
+                                    <span>@Model.Entry.ReadTime&nbsp;dakika</span>
+                                </h4>
+                                <div>
+                                    <ul>
+                                        <li><strong>@Model.Entry.PostedBy</strong></li>
+                                        <li><a asp-action="CategoryFilter" asp-route-category="@Model.Entry.Category"><strong>@Model.Entry.Category</strong></a></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="entry-text-section" id="last">
+                            @Html.Raw(Model.Entry.EntryText)
+                        </div>
+                        <div id="slidebox">
+                            <a class="close"></a>
+                            <p class="mb-0">DAHA FAZLA İÇERİK (@Model.EntriesAll.Count ADET YAZIDAN)</p>
+                            <h2>@Model.RandomEntry.Header</h2>
+                            <a class="more" asp-action="Details" asp-route-id="@Model.RandomEntry.Id">DEVAMI İÇİN TIKLAYINIZ »</a>
+                        </div>
+                        <div class="blog-tags">
+                            <ul>
+                                <li><strong>Etiketler:</strong></li>
+                                @foreach (var tag in Model.Entry.Tags.Split(','))
+                                {
+                                    <li><a asp-action="TagFilter" asp-route-tag="@tag">@tag</a></li>
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="blog-nav">
+                            <ul>
+                                @if (Model.Entry.Id > 1)
+                                {
+                                    <li><a asp-action="Details" asp-route-id="@prevPostId"><i class="fa fa-arrow-left"></i><strong>Önceki</strong></a></li>
+                                }
+
+                                @if (Model.EntriesAll.First().Id != Model.Entry.Id)
+                                {
+                                    <li><a asp-action="Details" asp-route-id="@nextPostId"><strong>Sonraki</strong><i class="fa fa-arrow-right"></i></a></li>
+                                }
+                                else
+                                {
+                                    <li><a>&nbsp;</a></li>
+
+                                }
+                            </ul>
+                        </div>
+                        <div class="comment_area mt_60">
+                            <h4 class="text-uppercase color_primary mb_30">Yorumlar (@Model.Comments.Count())</h4>
+                            <ul class="user_comments">
+                                @foreach (var comment in Model.Comments)
+                                {
+                                    DateTime commentDate = Convert.ToDateTime(@comment.Date);
+                                    <li class="mb_20 wow animated slideInUp">
+                                        <div class="comment_description comment-bg mb-20 p-20">
+                                            <div class="author_text rs-blog">
+                                                <div class="author_info">
+                                                    <h5 class="author_name color_primary">@comment.Name </h5>
+                                                    <span>
+                                                        <strong>
+                                                            @commentDate.ToString("dd MMMMM yyyy",
+                                                             CultureInfo.CreateSpecificCulture("tr-TR"))
+                                                        </strong>
+                                                    </span>
+                                                </div>
+                                                <p>@comment.CommentText</p>
+                                                <div class="reply-accordion blog-btn">Cevapla</div>
+                                                <div class="reply-panel">
+                                                    <div id="blog-form" class="blog-form">
+                                                        <h3 class="pt-20">Cevapla</h3>
+                                                        <form method="post" asp-action="SaveReply">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <label>İsim</label>
+                                                                    <input class="mb-0" type="text" asp-for="Reply.Name">
+                                                                    <span asp-validation-for="Reply.Name" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <label>Email</label>
+                                                                    <input class="mb-0" type="email" asp-for="Reply.Email">
+                                                                    <span asp-validation-for="Reply.Email" class="text-danger"></span>
+
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <label>Cevap</label>
+                                                                    <textarea class="mb-0" asp-for="Reply.ReplyText"></textarea>
+                                                                    <span asp-validation-for="Reply.ReplyText" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4 col-lg-4" hidden>
+                                                                    <input asp-for="Reply.Date" value="@DateTime.Now" type="text">
+                                                                </div>
+                                                                <div class="col-md-4 col-lg-4" hidden>
+                                                                    <input asp-for="Reply.CommentId" value="@comment.Id" type="text">
+                                                                </div>
+                                                                <div class="col-md-4 col-lg-4" hidden>
+                                                                    <input asp-for="Reply.EntryId" value="@Model.Entry.Id" type="text">
+                                                                </div>
+                                                                <div class="col-lg-12 pb-20">
+                                                                    <button type="submit" class="send-blog-post readon">Gönder</button>
+                                                                </div>
+
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    foreach (var reply in comment.TReply)
+                                    {
+                                        DateTime replyDate = Convert.ToDateTime(reply.Date);
+
+                                        <li class="mb_20 wow animated slideInUp">
+                                            <div class="comment_description comment-bg replied mb-20 p-20">
+
+                                                <div class="author_text rs-blog">
+                                                    <div class="author_info">
+                                                        <h5 class="author_name color_primary">@reply.Name </h5>
+                                                        <span>
+                                                            <strong>
+                                                                @replyDate.ToString("dd MMMMM yyyy",
+                                                               CultureInfo.CreateSpecificCulture("tr-TR"))
+                                                            </strong>
+                                                        </span>
+                                                    </div>
+                                                    <p>@reply.ReplyText</p>
+                                                    <div class="reply-accordion blog-btn">Cevapla</div>
+                                                    <div class="reply-panel">
+                                                        <div id="blog-form" class="blog-form">
+                                                            <h3 class="pt-20">Cevapla</h3>
+                                                            <form method="post" asp-action="SaveReply">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <label>İsim</label>
+                                                                        <input class="mb-0" type="text" asp-for="Reply.Name">
+                                                                        <span asp-validation-for="Reply.Name" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <label>Email</label>
+                                                                        <input class="mb-0" type="email" asp-for="Reply.Email">
+                                                                        <span asp-validation-for="Reply.Email" class="text-danger"></span>
+
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <label>Cevap</label>
+                                                                        <textarea class="mb-0" asp-for="Reply.ReplyText"></textarea>
+                                                                        <span asp-validation-for="Reply.ReplyText" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-lg-4" hidden>
+                                                                        <input asp-for="Reply.Date" value="@DateTime.Now" type="text">
+                                                                    </div>
+                                                                    <div class="col-md-4 col-lg-4" hidden>
+                                                                        <input asp-for="Reply.CommentId" value="@comment.Id" type="text">
+                                                                    </div>
+                                                                    <div class="col-md-4 col-lg-4" hidden>
+                                                                        <input asp-for="Reply.EntryId" value="@Model.Entry.Id" type="text">
+                                                                    </div>
+                                                                    <div class="col-lg-12 pb-20">
+                                                                        <button type="submit" class="send-blog-post readon">Gönder</button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                        <div id="blog-form" class="blog-form">
+                            <h3>Yorum Yazın</h3>
+                            <form method="post" asp-action="SaveComment">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>İsim</label>
+                                        <input class="mb-0" type="text" asp-for="Comment.Name">
+                                        <span asp-validation-for="Comment.Name" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>Email</label>
+                                        <input class="mb-0" type="email" asp-for="Comment.Email">
+                                        <span asp-validation-for="Comment.Email" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label>Yorum</label>
+                                        <textarea class="mb-0" asp-for="Comment.CommentText"></textarea>
+                                        <span asp-validation-for="Comment.CommentText" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="col-md-4 col-lg-4" hidden>
+                                        <input asp-for="Comment.Date" value="@DateTime.Now" type="text">
+                                    </div>
+                                    <div class="col-md-4 col-lg-4" hidden>
+                                        <input asp-for="Comment.EntryId" value="@Model.Entry.Id" type="text">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="send-blog-post readon">Gönder</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 pl-25">
+                <div class="sidebar-area">
+                    <partial name="_PartialViewSearchInBlog" model="Model" />
+                    <partial name="_PartialViewCategoryForBlog" model="Model" />
+                    <partial name="_PartialViewRecentForBlog" model="Model" />
+                    <partial name="_PartialViewTagsForBlog" model="Model" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog Section End -->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+<script src="~/js/slideBox.js"></script>

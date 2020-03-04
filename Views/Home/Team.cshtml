@@ -1,0 +1,111 @@
+﻿@model mizgindogancom.ViewModels.HomeViewModel;
+@{
+    ViewData["Title"] = "Ekibimiz | Mizgin Doğan Hukuk";
+}
+
+<partial name="_PartialViewBannerForHome" model="Model" />
+
+<!-- Team Inner Section Start -->
+<div id="rs-team" class="rs-team-slider2 rs-team-slider pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-30">
+                <div class="team-item">
+                    <div class="team-image">
+                        <img src="@Model.AllImages.ElementAt(16).Url" alt="@Model.AllImages.ElementAt(16).Name">
+                        <div class="team-content">
+                            <div class="text-box">
+                                <a class="image-popup" href="@Model.AllImages.ElementAt(16).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                                <div class="team-social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dark-bg">
+                        <h4 class="person-name"><a>@Model.AllImages.ElementAt(16).Name</a></h4>
+                        <span class="designation">Bankruptcy Lawyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-30">
+                <div class="team-item">
+                    <div class="team-image">
+                        <img src="@Model.AllImages.ElementAt(17).Url" alt="@Model.AllImages.ElementAt(17).Name">
+                        <div class="team-content">
+                            <div class="text-box">
+                                <a class="image-popup" href="@Model.AllImages.ElementAt(17).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                                <div class="team-social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dark-bg">
+                        <h4 class="person-name"><a>@Model.AllImages.ElementAt(17).Name</a></h4>
+                        <span class="designation">Trial Lawyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-30">
+                <div class="team-item">
+                    <div class="team-image">
+                        <img src="@Model.AllImages.ElementAt(18).Url" alt="@Model.AllImages.ElementAt(18).Name">
+                        <div class="team-content">
+                            <div class="text-box">
+                                <a class="image-popup" href="@Model.AllImages.ElementAt(18).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                                <div class="team-social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dark-bg">
+                        <h4 class="person-name"><a>@Model.AllImages.ElementAt(18).Name</a></h4>
+                        <span class="designation">Government Lawyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-30">
+                <div class="team-item">
+                    <div class="team-image">
+                        <img src="@Model.AllImages.ElementAt(19).Url" alt="@Model.AllImages.ElementAt(19).Name">
+                        <div class="team-content">
+                            <div class="text-box">
+                                <a class="image-popup" href="@Model.AllImages.ElementAt(19).Url"><i class="glyph-icon flaticon-eye"></i></a>
+                                <div class="team-social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dark-bg">
+                        <h4 class="person-name"><a>@Model.AllImages.ElementAt(19).Name</a></h4>
+                        <span class="designation">Toxic Tort Lawyer</span>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
+<!-- Team Inner Section End -->    

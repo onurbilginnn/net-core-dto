@@ -1,0 +1,270 @@
+﻿@model mizgindogancom.ViewModels.HomeViewModel;
+@using System.Globalization;
+@{
+    ViewData["Title"] = "Anasayfa | Mizgin Doğan Hukuk";
+}
+<div id="blog-loading-container">
+    <div id="send-mail-loading">
+        @*<img src="@Model.AllImages.ElementAt(9).Url" alt="@Model.AllImages.ElementAt(9).Name" />*@
+    </div>
+</div>
+<!-- Slider Start -->
+<div id="rs-slider" class="rs-slider rs-slider-one">
+    <div class="bend niceties">
+        <div id="nivoSlider" class="slides">
+            <img src="@Model.AllImages.ElementAt(3).Url" class="lazyload" alt="@Model.AllImages.ElementAt(3).Name" title="#slide-1" />
+            <img class="lazyload"
+                 src="@Model.AllImages.ElementAt(5).Url"
+                 alt="@Model.AllImages.ElementAt(5).Name"
+                 title="#slide-2" />
+        </div>
+        <!-- Slide 1 -->
+        <div id="slide-1" class="slider-direction">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container text-center">
+                        <div class="slider-des">
+                            <div class="sl-sub-title">Welecome To Our Lawfirm </div>
+                            <h1 class="sl-title">Leading Firms With Expert</h1>
+                            <h4 class="sl-desc margin-0">
+                                The largest law firms in the world are headquartered primarily in the United States
+                            </h4>
+                        </div>
+                        <div class="slider-bottom">
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Contact" class="readon">AVUKATA SOR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div id="slide-2" class="slider-direction">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container text-center">
+                        <div class="slider-des">
+                            <div class="sl-sub-title">The Power of Texting</div>
+                            <h1 class="sl-title">for Lawyers and Law Firms</h1>
+                            <h4 class="sl-desc margin-0">
+                                The largest law firms in the world are headquartered primarily in the United States
+                            </h4>
+                        </div>
+                        <div class="slider-bottom">
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Contact" class="readon">AVUKATA SOR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slider End -->
+<!-- Services Start -->
+<div id="rs-services" class="rs-services-3 long-gap">
+    <div class="container">
+        <div class="row rs-vertical-middle">
+            <div class="col-lg-12">
+                <div class="service-inner">
+                    <!-- 1st -->
+                    <div class="service-box">
+                        <div class="icon-part">
+                            <i class="glyph-icon flaticon-work"></i>
+                        </div>
+                        <div class="text">
+                            <a href="#"><h3>Reliability</h3></a>
+                            <p>incididunt ut lab dolore magna aliqua, consectetur elit,sed eiusmod tempor Lorem ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="service-box dark-bg">
+                        <div class="icon-part">
+                            <i class="glyph-icon flaticon-house"></i>
+                        </div>
+                        <div class="text">
+                            <a href="#"><h3>Allegiance</h3></a>
+                            <p>incididunt ut lab dolore magna aliqua, consectetur elit,sed eiusmod tempor Lorem ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <!-- 3nd -->
+                    <div class="service-box">
+                        <div class="icon-part">
+                            <i class="glyph-icon flaticon-support"></i>
+                        </div>
+                        <div class="text">
+                            <a href="#"><h3>Support</h3></a>
+                            <p>incididunt ut lab dolore magna aliqua, consectetur elit,sed eiusmod tempor Lorem ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4th -->
+
+    </div>
+</div>
+<!-- Services End -->
+<!-- About Lawyer Start -->
+<div id="rs-about-lawyer" class="rs-about-lawyer rs-about-lawyer1 pt-100">
+    <div class="container">
+        <div class="row rs-vertical-middle">
+            <div class="col-lg-6">
+                <div class="rs-left-border-title">
+                    <h4>AVUKAT</h4>
+                    <h2>MİZGİN DOĞAN </h2>
+                </div>
+                <h5 class="sub-tilte">
+                    “Adalet nedir? Ağaçları sulamak. Zulüm nedir? Dikenleri sulamak. Adalet, bir nimeti olması gereken yere koymaktır. Mevlana”
+                </h5>
+                <p class="des">Mizgin Doğan 9 Şubat 1990 yılında Mersin' de doğmuştur. Özel İtalyan Evrim Ortaokulunda eğitim gördükten sonra İstek Vakfı Bilge Kağan Lisesinden 2006 senesinde mezun olan Avukat Mizgin Doğan 2011 senesinde Doğu Akdeniz Üniversitesin' den mezun olup Yüksek Lisansına Bahçeşehir Üniversitesi Özel Hukuk alanında başlamıştır.</p>
+                <div class="service-call pb-100 mt-45">
+                    <h4>Sorularınız için lütfen arayınız.</h4>
+                    <ul>
+                        <li><a href="tel:@Model.Info.Tel1">@Model.Info.Tel1</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="@Model.AllImages.ElementAt(6).Url" alt="@Model.AllImages.ElementAt(6).Name">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Lawyer End -->
+<!-- free Consultation Start -->
+<partial name="_PartialViewFreeConsultMain" model="Model" />
+<!-- Free Consultation End -->
+<!-- Blog Start -->
+<section id="rs-blog" class="rs-blog pt-50 pb-50">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h4 class="sub-title top-line primary">YAZILARIMIZ</h4>
+            <h2 class="title">EN SON YAZILARIMIZ</h2>
+        </div>
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
+            @foreach (var blogItem in Model.EntriesRecent)
+            {
+                DateTime dateRecent = Convert.ToDateTime(blogItem.Date);
+                <div class="blog-item">
+
+                    <div class="blog-img">
+                        <a class="blog-link" asp-controller="Blog" asp-action="Details" asp-route-id="@blogItem.Id" title="Blog Link">
+                            <img src="@blogItem.ImageUrlMed" alt="Blog Image">
+                        </a>
+                        <div class="date">
+                            @dateRecent.ToString("dd MMMMM yyyy",
+                            CultureInfo.CreateSpecificCulture("tr-TR"))
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="blog-meta border-style">
+
+                            <h4><a asp-controller="Blog" asp-action="Details" asp-route-id="@blogItem.Id">@blogItem.Header</a></h4>
+                            <h6>
+                                <i class="fa fa-book"></i>
+                                <span>@blogItem.ReadTime&nbsp;dakika</span>
+                            </h6>
+                            <ul>
+                                <li><span>@blogItem.PostedBy</span></li>
+                                <li><span>@blogItem.Category </span></li>
+                            </ul>
+
+
+                        </div>
+                        <div class="blog-desc">
+                            <p>@blogItem.EntrySummary.Substring(0, 100)...</p>
+                        </div>
+                        <a asp-controller="Blog" asp-action="Details" asp-route-id="@blogItem.Id" class="blog-btn">Devamı için tıklayınız</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- Blog End -->
+<!-- Videos Start -->
+<section id="rs-blog" class="rs-blog pt-50 pb-50">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h4 class="sub-title top-line primary">VİDEOLAR</h4>
+            <h2 class="title">EN SON VİDEOLAR</h2>
+        </div>
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
+            @foreach (var blogItem in Model.EntriesRecent)
+            {
+                DateTime dateRecent = Convert.ToDateTime(blogItem.Date);
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <a class="blog-link" href="http://wus-streaming-video-msn-com.akamaized.net/e85f689c-41c4-4d96-8024-91f5e5e00cec/f97e3ab6-c74d-440e-9ea4-df8084455abf.mp4" title="Blog Link">
+                            <img src="http://wus-streaming-video-msn-com.akamaized.net/e85f689c-41c4-4d96-8024-91f5e5e00cec/f97e3ab6-c74d-440e-9ea4-df8084455abf.mp4" alt="Blog Image">
+                        </a>
+                        <div class="date">
+                            @dateRecent.ToString("dd MMMMM yyyy",
+                            CultureInfo.CreateSpecificCulture("tr-TR"))
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="blog-meta border-style">
+
+                            <h4><a href="blog-single.html">@blogItem.Header</a></h4>
+                            <ul>
+                                <li><span>@blogItem.PostedBy</span></li>
+                                <li><span>@blogItem.Category </span></li>
+                            </ul>
+                        </div>
+                        <div class="blog-desc">
+                            <p>@blogItem.EntrySummary.Substring(0, 100)...</p>
+                        </div>
+                        <a href="blog-single.html" class="blog-btn">Devamı için tıklayınız</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- Videos End -->
+<!-- Our Practice Areas Start -->
+<div class="rs-our-practice pt-100 pb-100">
+    <div class="container">
+        <div class="nagetive-margin white-bg pt-100">
+            <div class="sec-title text-center">
+                <h4 class="sub-title top-line primary">FAALİYET ALANLARIMIZ</h4>
+                <h2 class="title">UZMANLIKLAR</h2>
+            </div>
+            <partial name="_PartialViewPractice" model="Model" />
+            <div class="btn-area text-center pt-40">
+                <a asp-action="Service" class="readon">FAALİYET ALANLARIMIZ</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Practice Areas END -->
+<!-- Partner Start -->
+<div id="rs-defult-partner" class="rs-defult-partner sec-color pt-100 pb-100">
+    <div class="container">
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="30" data-autoplay="true" data-autoplay-timeout="8000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="true" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="true" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="true" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/1.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/2.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/3.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/4.png" alt="Partner Image"></a>
+            </div>
+            <div class="partner-item">
+                <a href="#"><img src="images/partner/5.png" alt="Partner Image"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Partner End -->

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App">
+      <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+      <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Sakura.AspNetCore.Mvc.PagedList" Version="2.0.12" />
+    <PackageReference Include="Sakura.AspNetCore.PagedList" Version="2.0.2" />
+    <PackageReference Include="Sakura.AspNetCore.PagedList.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Sakura.AspNetCore.PagedList.Async" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

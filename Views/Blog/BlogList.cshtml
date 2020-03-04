@@ -1,0 +1,77 @@
+﻿@model mizgindogancom.ViewModels.BlogViewModel;
+@using System.Globalization;
+
+@{
+    ViewData["Title"] = "Yazılarımız | Mizgin Doğan Hukuk";
+}
+
+<partial name="_PartialViewBannerForBlog" model="Model" />
+<!-- Blog Section Start -->
+<div id="rs-blog" class="rs-blog pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 pr-25 mb-md-50">
+                <div class="row">
+                    @if (Model.EntriesPaging.Count != 0)
+                    {
+                        @foreach (var blogItem in Model.EntriesPaging)
+                        {
+                            DateTime dateRecent = Convert.ToDateTime(blogItem.Date);
+                            <div class="col-sm-6 mb-50">
+                                <div class="blog-item">
+                                  
+                                    <div class="blog-img">
+                                        <a class="blog-link" asp-action="Details" asp-route-id="@blogItem.Id" title="@blogItem.Header">
+                                                
+                                                <img src="@blogItem.ImageUrlMed" alt="@blogItem.Header">
+                                        </a>
+                                        <div class="date">
+                                            @dateRecent.ToString("dd MMMMM yyyy",
+                                                CultureInfo.CreateSpecificCulture("tr-TR"))
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper">
+                                        <div class="blog-meta border-style">
+                                            <h4><a asp-action="Details" asp-route-id="@blogItem.Id">@blogItem.Header</a></h4>
+                                            <h6>
+                                                <i class="fa fa-book"></i>
+                                                <span>@blogItem.ReadTime&nbsp;dakika</span>
+                                            </h6>
+                                            <ul>
+                                                <li><span>@blogItem.PostedBy</span></li>
+                                                <li><span>@blogItem.Category </span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="blog-desc">
+                                            <p>@blogItem.EntrySummary.Substring(0, 200)...</p>
+                                        </div>
+                                        <a asp-action="Details" asp-route-id="@blogItem.Id" class="blog-btn">Devamı için tıklayınız</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    } else
+                    {
+                        <div class="col-sm-12 mb-50 text-center">
+                            <h3>Aradığınız Sonuç Bulunamadı...</h3>
+                        </div>
+                    }
+
+
+                </div>
+    
+                <pager source="@Model.EntriesPaging" />
+
+            </div>
+            <div class="col-lg-4 pl-25">
+                <div class="sidebar-area">
+                    <partial name="_PartialViewSearchInBlog" model="Model" />
+                    <partial name="_PartialViewCategoryForBlog" model="Model" />
+                    <partial name="_PartialViewRecentForBlog" model="Model" />
+                    <partial name="_PartialViewTagsForBlog" model="Model" />  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog Section End -->

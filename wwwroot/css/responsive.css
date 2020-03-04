@@ -1,0 +1,771 @@
+﻿@charset "utf-8";
+
+/**
+*
+* -----------------------------------------------------------------------------
+*
+* Template : Johnfirm - Multipurpose Lawyer HTML Template
+* Author : rs-theme
+* Author URI : http://www.rstheme.com/
+*
+* -----------------------------------------------------------------------------
+*
+**/
+
+/* Medium Min Layout: 1366px. */
+@media only screen and (max-width: 1366px) {
+    .rs-our-practice2 .practice-tabs-section .nav li {
+        width: 200px;
+        min-width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .counter-style-two .rs-counter-list{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .counter-style-two .rs-counter-list .rs-counter {
+        margin-bottom: 8px;
+    }
+    .rs-services-4 .service-inner.services-list .service-box{
+        padding: 40px 30px 38px;
+    }
+   
+}
+
+@media only screen and (max-width: 1199px) {
+	#rs-header .menu-area.rs-defult-header .main-menu{
+        padding-right: 75px;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li {
+        margin-right: 0;
+        padding: 0;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a {
+        font-size: 14px;
+        padding: 0 0 0 11px;
+    }
+    .rs-slider .sl-sub-title {
+        font-size: 40px;
+    }
+    .rs-slider .sl-title {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+    .rs-services-3.long-gap {
+        margin-top: 100px;
+    }
+    .rs-title h2,
+    .sec-title .title,
+    .rs-heading-style3 h2,
+    .rs-left-border-title h2 {
+        font-size: 30px;
+    }
+    .rs-our-practice .practice-inner .details {
+        padding: 15px;
+    }
+
+    .pr-30{
+        padding-right: 15px;
+    }
+    .pl-30{
+        padding-left: 15px;
+    }
+    .rs-blog .blog-item .content-wrapper .blog-meta h4 {
+        font-size: 17px;
+    }
+    .rs-about-lawyer .about-inner .col-lg-7{
+        max-width: 100%;
+        width: 100%;
+        flex: unset;
+    }
+    .rs-our-practice2 .practice-tabs-section .nav li {
+        width: 150px;
+    }
+    .rs-our-practice2 .practice-tabs-section .nav li h4 {
+        font-size: 14px;
+    }
+    .counter-style-two.defult-style .rs-counter-list,
+    .counter-style-two.counterup-item-bg .rs-counter-list,
+    .counter-style-two.transparent-background .rs-counter-list{
+        display: block;
+        text-align: center;
+    }
+    .counter-style-two .rs-counter-list .icon-left{
+        padding: 0 0 14px;
+    }
+    .rs-slider.rs-slider-three .sl-title,
+    .rs-services-4 .service-inner .service-box .icon-part i{
+        font-size: 30px;
+    }
+    .rs-our-practice .content-details,
+    .rs-services-4 .service-inner .service-box {
+       padding-left: 15px;
+       padding-right: 15px;
+    }
+    .rs-services-4 .service-inner .service-box .icon-part h3{
+        font-size: 16px;
+    }
+    .rs-about-lawyer .about-right-bg, 
+    .rs-about-lawyer .about-inner {
+        background: #faf8f7;
+    }
+    .rs-about-lawyer .about-right-bg .col-lg-7, 
+    .rs-about-lawyer .about-inner .col-lg-7{
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .counter-style-two .rs-counter-list .rs-counter,
+    .counter-top-area .rs-counter-list .rs-counter {
+        padding-top: 8px;
+        font-size: 36px;
+    }
+    .rs-banner-section .banner-inner .banner-title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .rs-breadcrumbs .breadcrumbs-image .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
+        font-size: 30px;
+    }
+}
+
+/* Layout: Min 992px Max 1199px. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg{
+        display: none;
+    }
+    .rs-services-3 .service-inner .service-box {
+        padding: 35px 25px 30px;
+    }
+    .rs-free-consultation .services-item h4{
+        font-size: 17px;
+    }
+    .rs-about-lawyer .about-style2 {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .nav-menu .rs-mega-menu > a:after, 
+    .nav-menu > .menu-item-has-children > a:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        float: right;
+        margin: 2px 0 0 5px;
+    }
+    .sticky{ 
+        background: #fff !important;
+        position: fixed !important;
+        top: 0px;
+        z-index: 999;
+        margin: 0 auto !important;
+        padding: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-name: sticky-animation;
+        animation-name: sticky-animation;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu {
+        padding-right: 84px;
+    }
+}
+/* Layout: Min 768px Max 1199px. */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .counter-top-area .rs-counter-list h4 {
+        font-size: 16px;
+    }
+    .rs-our-practice .practice-inner .top-bar h4 {
+        font-size: 14px;
+    }
+    .rs-our-practice .practice-inner .details {
+        padding: 15px;
+    }
+    .rs-team-slider .team-item .text-bottom {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .rs-our-practice .practice-inner .top-bar h4 {
+        font-size: 14px;
+    }
+}
+
+/* Medium Layout: 991px. */
+@media only screen and (max-width: 991px) {
+    .rs-free-consultation .person-image,
+    .about-inner .about-bg img{
+        display: none;
+    }
+    .pt-100,
+    .counter-style-one {
+        padding-top: 80px !important;
+    }
+    .pb-100,
+    .rs-our-practice2 {
+        padding-bottom: 80px !important;
+    }
+    .pb-90 {
+        padding-bottom: 74px;
+    }
+    .mt-100{
+        margin-top: 80px;
+    }
+    .mb-100{
+        margin-bottom: 80px;
+    }
+    .pt-90{
+        padding-top: 70px !important;
+    }
+    .pr-25,
+    .rs-our-practice2 .tab-content .rs-vertical-middle .col-lg-6:first-child{
+        padding-right: 15px;
+    }
+    .pl-25,
+    .rs-our-practice2 .tab-content .rs-vertical-middle .col-lg-6:last-child {
+        padding-left: 15px;
+    }
+    .rs-case-result-pages .col-lg-6.pr-0  {
+        padding-right: 15px !important;
+    }
+    .rs-case-result-pages .col-lg-6.pl-0  {
+        padding-left: 15px !important;
+    }
+
+    .pb-170 {
+        padding-bottom: 150px !important;
+    }
+
+    .pb-175 {
+        padding-bottom: 155px !important;
+    }
+    .mpb-80{
+        padding-bottom: 80px !important;
+    }
+    .mb-md-20 {
+        margin-bottom: 20px !important;
+    }
+    .mb-md-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-md-40{
+        margin-bottom: 40px !important;
+    }
+    .mb-md-50{
+        margin-bottom: 50px !important;
+    }
+    .mb-md-60{
+        margin-bottom: 60px !important;
+    }
+    .mb-md-80,
+    .testimonia-section.mb-180{
+        margin-bottom: 80px !important;
+    }
+    .mb-pt-80{
+        padding-top: 80px !important;
+    }
+    .sec-spacer{
+        padding: 70px 0 80px;
+    }
+    .margin-md-0{
+        margin: 0 !important;
+    }
+    .rs-left-border-title::after {
+        height: 55px;
+    }
+    .rs-practice {
+        padding-top: 73px;
+    }
+    .rs-case-result-pages .case-result-imge {
+        height: 380px;
+    }
+    .testimonia-section .content-wrapper{
+        padding-top: 70px;
+    }
+    .testimonia-section .testi-inner-bg{
+        padding: 80px 0;
+    }
+    .counter-top-area.long-gap{
+        padding-bottom: 80px;
+    }
+    .rs-free-consultation.long-gap-home{
+        padding-bottom: 250px;
+    }
+    .rs-our-practice .nagetive-margin{
+        margin-top: 0;
+        padding-top: 0 !important;
+    }
+    .footer-widget-two .footer-desc:last-child{
+        margin-bottom: 0;
+    }
+    #rs-header.transparent-header .menu-area .rs-menu .nav-menu li a i,
+    .hidden-md {
+        display: none;
+    }
+
+    .full-width-header .rs-header .menu-area .cart-btn .cart-counter {
+        top: 4px;
+        right: auto;
+        left: 26px;
+    }
+    .full-width-header .rs-header .menu-area .logo-area{
+        position: absolute;
+        left: 15px;
+        top: 0;
+        height: 83px;
+        line-height: 80px;
+        z-index: 11;
+    }
+    .rs-footer .footer-top {
+        padding: 80px 0 76px;
+    }
+    .rs-services-3.long-gap {
+        margin-top: 80px;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a{
+        height: 47px;
+        line-height: 47px;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.mega-menu {
+        right: 0;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.mega-menu .mega-menu-container .single-megamenu {
+        width: 100%;
+    }
+    .full-width-header .rs-header .menu-area .main-menu .rs-menu .nav-menu .mega-menu .single-megamenu ul.sub-menu {
+        padding-bottom: 0;
+    }
+    .nav-menu .mega-menu .single-megamenu div.sub-menu-close {
+        display: none;
+    }
+    .contact-sidebar-section .sidebar-inner {
+        border-radius: 0 0 5px 5px;
+    }
+    .contact-sidebar-section .sidebar-inner .sider-contact {
+        border-radius: 5px 5px 0 0;
+        padding-bottom: 35px;
+    }
+    .contact-sidebar-section .contact-form-one {
+        padding: 40px;
+    }
+    .rs-services-3 .service-inner .service-box {
+        float: none;
+        width: 100%;
+    }
+    .rs-footer .footer-top .footer-title {
+        margin-bottom: 25px;
+    }
+    .rs-blog-single .blog-item .blog-bottom .image-with-p img {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 25px;
+        display: block;
+        width: 100%;
+    }
+    .rs-our-practice .btn-area.pt-40{
+        padding-top: 20px;
+    }
+    .rs-our-practice2 .tab-content .content-inner{
+        margin-top: 30px;
+    }
+    .counter-style-two.defult-style{
+        padding-top: 80px;
+    }
+    .counter-style-two .top-50{
+        margin-top: 0;
+    }
+    .rs-blog.pt-250 {
+        padding-top: 80px !important;
+    } 
+    .rs-blog.mtm-150{
+        margin-top: 0;
+    }
+    .rs-services-4 .service-inner.services-list .service-box{
+        float: left;
+        width: 50%;
+    }
+    .rs-cta .cta-content h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .rs-cta{
+        padding: 100px 0 80px;
+    }
+    .rs-banner-section .banner-inner .subtitle{
+        text-shadow: 0 0 24px #fff;
+    }
+    .rs-case-result .case-content p{
+        text-shadow: 0 0 15px #000;
+    }
+    .rs-about-lawyer .about-style2{
+        padding-left: 30px;
+    }
+    .rs-our-practice2 .tab-content {
+        max-width: 600px;
+        margin: 40px auto 0;
+    }
+    .full-width-header.header-transparent{
+        position: static;
+    }
+    .rs-about-lawyer .about-right-bg .about-style2{
+        padding-left: 30px;
+    }
+    .rs-about-lawyer .about-style2{
+        padding-right: 30px;
+    }
+    
+}
+/* Layout: Min 768px Max 992px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-address-section .contact-info {
+        min-height: 235px;
+    }
+    .rs-our-practice2 .practice-tabs-section .nav li h4 {
+        font-size: 12px;
+    }
+    .rs-our-practice2 .practice-tabs-section .nav li {
+        width: 115px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0 2px;
+    }
+    .rs-services-3 .service-inner .service-box{
+        padding-right: 200px;
+    }
+}
+/* Mobile Layout: 767px. */
+@media only screen and (max-width: 767px) {
+    .mb-sm-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-sm-20 {
+        margin-bottom: 20px;
+    }
+    .mb-sm-40 {
+        margin-bottom: 40px !important;
+    }
+    .rs-slider .sl-desc,
+    .full-width-header .toolbar-area{
+        display: none;
+    }
+    .rs-slider .sl-title {
+        line-height: 36px;
+        margin-bottom: 0;
+    }
+    .rs-slider .sl-title{
+        font-size: 30px;
+    }
+    .rs-banner-section .banner-inner .banner-title{
+        line-height: 36px;
+        font-size: 26px;
+    }
+    .rs-banner-section .banner-inner .banner-title {
+        margin-bottom: 10px;
+    }
+    .rs-slider .slider-bottom{
+        margin-top: 30px;
+    }
+    .rs-slider .sl-sub-title{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .rs-breadcrumbs .breadcrumbs-image img {
+        min-height: 150px;
+    }
+    .rs-breadcrumbs .breadcrumbs-image .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .rs-slider .sl-sub-title,
+    .rs-slider.rs-slider-two .sl-sub-title {
+        margin-bottom: 10px;
+    }
+    .rs-case-result-pages .case-item {
+        padding: 25px 25px 15px;
+    }
+    .rs-case-result-pages .rs-title h4 {
+        font-size: 15px;
+    }
+    .rs-case-result-pages .rs-title h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .rs-case-result-pages .case-item .case-content h4 {
+        width: 115px;
+        padding-right: 15px;
+        font-size: 15px;
+    }
+    .rs-case-result-pages .case-item .case-content p {
+        margin-bottom: 15px;
+    }
+    .rs-blog-single .blog-item .blog-top .blog-title .title {
+        font-size: 22px;
+    }
+    .rs-blog-single .blog-item .blog-top .blog-date {
+        width: 50PX;
+    }
+    .rs-practice .gridFilter {
+        margin-bottom: 30px;
+    }
+    .rs-practice .practice-item .practice-content img {
+        width: 100%;
+    }
+    .rs-our-practice2 .practice-tabs-section .nav li {
+        margin: 0 auto 30px;
+        display: block;
+    }
+    .rs-free-consultation .nagetive-margin {
+        padding: 40px 30px 40px;
+    }
+    .rs-slider.rs-slider-three .slider-bottom{
+        margin-top: 16px;
+    }
+    .rs-slider.rs-slider-three .slider-inner{
+        background: transparent;
+    }
+    .rs-single-product .single-product-nav .images-slide-single {
+        width: 137px !important;
+    }
+    .rs-banner-section .banner-inner .subtitle {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+}
+
+/* Layout: Min 768px Max 992px. */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .rs-services-4 .service-inner.services-list .service-box.service-box3{
+        background: #9b776a;
+    }
+    .rs-services-4 .service-inner.services-list .service-box.service-box4{
+        background: #8d6e63;
+    }
+}
+
+/* Device Size : 590px. */
+@media only screen and (max-width: 575px) {
+    .rs-slider .nivo-directionNav > a{
+        display: none;
+    }
+    .mb-xs-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-xs-40 {
+        margin-bottom: 40px !important;
+    }
+    .counter-top-area .rs-counter-list {
+        text-align: center;
+    }
+    .counter-top-area .rs-counter-list .icon-left {
+        float: none;
+        padding-right: 0;
+        margin-right: 0;
+        padding-bottom: 20px;
+    }
+    .counter-top-area .rs-counter-list .icon-left:before{
+        display: none;
+    }
+    .readon {
+        height: 40px;
+        line-height: 42px;
+    }
+    .rs-slider-two .readon {
+            padding: 0 10px;
+            padding-right: 25px;
+            font-size: 13px;
+            height: 35px;
+            line-height: 36px;
+    }
+    .rs-slider-two .readon:before {
+        right: 12px;
+        font-size: 10px;
+    }
+    .rs-slider-two .slider-bottom ul li{
+        margin: 0;
+    }
+    .rs-slider-two .readon:hover:before {
+        right: 14px;
+    }
+    .service-call.pb-100{
+        padding-bottom: 60px !important;
+    }
+    .rs-about-lawyer .about-inner .about-style2 {
+        padding: 60px 30px 0;
+    }
+    .rs-services-4 .service-inner.services-list .service-box{
+        width: 100%;
+        float: none;
+    }
+    .rs-banner-section .banner-inner .banner-title{
+        font-size: 24px;
+    }
+    .rs-banner-section .banner-inner .subtitle {
+        font-size: 15px;
+    }
+    .gmap-one iframe,
+    .gmap-two iframe{
+        height: 350px;
+    }
+
+}
+
+/* Small Device : 480px. */
+@media only screen and (max-width: 480px) {
+    .rs-banner-section img.banner-image{
+        min-height: 210px;
+    }
+    .contact-sidebar-section .sidebar-inner .sider-contact,
+    .contact-sidebar-section .contact-form-one {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .pagination .page-item > * {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+    }
+    .rs-slider .sl-sub-title {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .rs-slider .sl-title{
+        line-height: 26px;
+    }
+    .rs-slider .sl-title,
+    .sec-title .title h4,
+    .rs-heading-style3 h4,
+    .rs-left-border-title h4,
+    .rs-free-consultation .right-content h4,
+    .rs-services-3 .service-inner .service-box .text h3{
+        font-size: 18px;
+    }
+    .rs-title h2,
+    .sec-title .title, 
+    .rs-heading-style3 h2,
+    .rs-left-border-title h2,
+    .rs-cta .cta-content h2,
+    .rs-team-single .list-style .team-content .rs-title .title,
+    .rs-slider.rs-slider-three .sl-title,
+    .rs-banner-section .banner-inner .banner-title {
+        font-size: 20px;
+    }
+    .sec-title,
+    .rs-title,
+    .rs-left-border-title,
+    .rs-heading-style3 {
+        margin-bottom: 35px;
+    }
+    .rs-case-result-pages .case-result-imge {
+        height: 280px;
+    }
+    .rs-case-result-pages .case-item .case-content h4{
+        float: none;
+        width: 100%;
+    }
+    .rs-banner-section .banner-inner .banner-title{
+        line-height: 26px;
+    }
+    .rs-team-single .list-style .team-content .rs-title {
+        margin-bottom: 30px;
+    }
+    .rs-slider .slider-bottom{
+        margin-top: 20px;
+    }
+    .rs-slider .slides > img{
+        min-height: 215px;
+    }
+    .rs-left-border-title::after {
+        height: 45px;
+    }
+    .rs-services-3 .service-inner .service-box {
+        padding: 35px 25px 30px;
+    }
+    .rs-free-consultation .banner-form-home {
+        padding: 0 20px;
+    }
+    .rs-blog-single .blog-item .blog-top .blog-title .title {
+        font-size: 20px;
+    }
+    .faq-section #accordion .panel .panel-heading .panel-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .rs-slider-two .readon {
+        font-size: 11px;
+    }
+    .rs-checkout .coupon-toggle .accordion .card .card-header .card-title button {
+        padding: 0;
+    }
+    .rs-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input input {
+        float: none;
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+    .rs-checkout .coupon-toggle .accordion .card .card-body {
+        margin-top: 10px;
+    }
+    .readon,
+    .rs-banner-section .banner-inner .subtitle{
+        font-size: 13px;
+    }
+    .rs-header  .logo-area img{
+        height: 30px;
+    }
+    .rs-single-product .tab-area ul.nav-tabs {
+        text-align: center;
+    }
+    .rs-single-product .tab-area ul.nav-tabs li {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+    .rs-single-product .tab-area ul.nav-tabs li:last-child {
+        margin-right: auto;
+        margin-bottom: 0 !important;
+    }
+    .sidebar-area .latest-post .post-item .post-desc h6 {
+        line-height: 20px;
+    }
+    .sidebar-area .latest-post .post-item .post-desc h6 a {
+        font-size: 14px;
+    }
+    .rs-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .placeholder-cntrl input {
+        width: 100%;
+    }
+    .rs-team-single .team-contact ul li {
+        display: block;
+        margin: 0;
+    }
+    .rs-case-result.bg2{
+        background: #333;
+    }
+    .rs-case-result .case-content h4{
+        float: none;
+        width: 100%;
+    }
+    .rs-case-result .owl-dots{
+        left: 0;
+    }
+}
+
+/* Extra Small Device : 320px. */
+@media only screen and (max-width: 320px) {
+    .rs-checkout .full-grid .payment-method .bottom-area {
+        text-align: center;
+    }
+}

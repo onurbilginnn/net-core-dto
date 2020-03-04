@@ -1,0 +1,11 @@
+﻿<div class="tags-cloud clearfix">
+    <h4 class="title">Etiketler</h4>
+    <ul>
+        @foreach (var tag in Model.TagList)
+        {
+            <li>
+                <a asp-action="TagFilter" asp-route-tag="@tag">@tag</a>
+            </li>
+        }
+    </ul>
+</div><!-- .tags-cloud end -->  

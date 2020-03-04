@@ -1,0 +1,363 @@
+﻿@{ 
+    var mail = "av.mizgindogan@gmail.com";
+    var telNo = "+905326482757";
+    var telNoShort = "0532 648 2757";
+    var adress = "Kartaltepe Mah. Pembeay Sokak No:14 D:7 Bakırköy/İstanbul";
+    var shortAdress = "Bakırköy/İstanbul";
+    var opening = "09:00";
+    var closing = "19:00";
+    var favIconUrl = "https://res.cloudinary.com/dhyscr4zm/image/upload/v1558091875/mizgindogancom/favicon.png";
+    var logoUrl = "https://res.cloudinary.com/dhyscr4zm/image/upload/v1558957152/mizgindogancom/LOGO.png";
+    var whiteLogoUrl = "https://res.cloudinary.com/dhyscr4zm/image/upload/v1558957152/mizgindogancom/white-logo.png";
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    @Html.Raw(ViewBag.MetaTags)
+    <title>@ViewData["Title"]</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="@favIconUrl">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/css/themes/semantic.min.css" />
+    <!-- bootstrap v4.3.1 css -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <!-- off canvas css -->
+    <link rel="stylesheet" type="text/css" href="~/css/off-canvas.css">
+    <!-- linea-font css -->
+    <link rel="stylesheet" type="text/css" href="~/fonts/linea-fonts.css">
+    <!-- flaticon css  -->
+    <link rel="stylesheet" type="text/css" href="~/fonts/flaticon.css">
+    <!-- nivo slider CSS -->
+    <link rel="stylesheet" type="text/css" href="~/inc/custom-slider/css/nivo-slider.css">
+    <link rel="stylesheet" type="text/css" href="~/inc/custom-slider/css/preview.css">
+    <!-- magnific popup css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <!-- Main Menu css -->
+    <link rel="stylesheet" href="~/css/rsmenu-main.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="defult-home">
+    <!-- Preloader area start here -->
+    <div id="loading" class="image-preloader">
+        <div class="logo-container loader"><img class="logo-container" src="@logoUrl" alt="Mizgin Dogan Logo"></div>
+    </div>
+    <!-- End preloader here -->
+    <!--Full width header Start-->
+    <div class="full-width-header">
+        <!-- Toolbar Start -->
+        <div class="toolbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-sm-12">
+                        <div class="toolbar-contact">
+                            <ul>
+                                <li><i class="fa fa-envelope-o"></i><a href="mailto:@mail">@mail</a></li>
+                                <li><i class="fa fa-phone"></i><a href="tel:@telNo">@telNoShort</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-sm-12">
+                        <div class="toolbar-sl-share">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="get-btn"><a asp-controller="Home" asp-action="Contact">AVUKATA SOR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Toolbar End -->
+        <!--Header Start-->
+        <header id="rs-header" class="rs-header">
+            <!-- Menu Start -->
+            <div class="menu-area menu-sticky">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="logo-area scrollUp">
+                                <a><img class="logo-container lazyload" src="@logoUrl" alt="Mizgin Dogan Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="main-menu">
+                                <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                                <nav class="rs-menu">
+                                    <ul class="nav-menu">
+                                        <!-- Home -->
+                                        <li @ViewBag.Home>
+                                            <a asp-controller="Home" asp-action="Index" class="home">ANASAYFA</a>
+                                        </li>
+                                        <!-- End Home -->
+                                        <!--About Start-->
+                                        <li @ViewBag.About><a asp-controller="Home" asp-action="About">HAKKIMIZDA</a></li>
+                                        <!--About End-->
+                                        <!--Practice Menu Start-->
+                                        <li @ViewBag.Service>
+                                            <a asp-controller="Home" asp-action="Service">FAALİYET ALANLARIMIZ</a>
+                                        </li>
+                                        <!--Practice Menu End-->
+                                        <!--Case Result Menu Start -->
+                                        @*<li><a href="case-result.html">Case Result</a></li>*@
+                                        <!--Case Result Menu End -->
+                                        <!-- Mega Menu Start -->
+                                        <li @ViewBag.Team>
+                                            <a asp-controller="Home" asp-action="Team">EKİBİMİZ</a>
+                                        </li>
+                                        <!--Mega Menu End -->
+                                        <!--Blog Menu Start-->
+                                        <li @ViewBag.Blog>
+                                            <a asp-controller="Blog" asp-action="BlogList">YAZILARIMIZ</a>
+                                        </li>
+                                        <!--Blog Menu End-->
+                                        <!--Contact Menu Start-->
+                                        <li @ViewBag.Contact>
+                                            <a asp-controller="Home" asp-action="Contact">İLETİŞİM</a>
+                                        </li>
+                                        <!--Contact Menu End-->
+                                    </ul> <!-- //.nav-menu -->
+                                </nav>
+                            </div> <!-- //.main-menu -->
+                            <div class="appointment-cart hidden-md">
+                                <ul class="cart">
+                                    <li class="right-bar-icon rs-offcanvas-link text-right">
+
+                                        <a class="hidden-xs rs-search"
+                                           data-target=".search-modal"
+                                           data-toggle="modal"><i class="fa fa-search"></i></a>
+
+
+                                    </li>
+
+                                    <li><a id="nav-expander" class="nav-expander"><i class="fa fa-bars fa-lg white"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu End -->
+            <!-- Canvas Menu start -->
+            <nav class="right_menu_togle hidden-md">
+                <div class="close-btn"><span id="nav-close" class="text-center"><i class="fa fa-close"></i></span></div>
+                <div class="canvas-logo">
+                    <a asp-controller="Home" asp-action="Index"><img class="logo-container lazyload" src="@logoUrl" alt="Mizgin Dogan Logo"></a>
+                </div>
+                <div class="offcanvas-text">
+                    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+                </div>
+                <div class="canvas-contact">
+                    <h5 class="canvas-contact-title">Contact Info</h5>
+                    <ul class="contact">
+                        <li><i class="fa fa-globe"></i>@shortAdress</li>
+                        <li><i class="fa fa-phone"></i><a href="tel:@telNo">@telNoShort</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:@mail">@mail</a></li>
+                        <li><i class="fa fa-clock-o"></i>@opening - @closing</li>
+                    </ul>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Canvas Menu end -->
+        </header>
+        <!--Header End-->
+    </div>
+    <!--Full width header End-->
+    <div class="main-content">
+        @RenderBody()
+    </div>
+    <div class="fixed-bottom">
+        <div>
+            <a class="fixed-bottom-1" asp-controller="Home" asp-action="Contact">AVUKATA SOR</a>
+        </div>
+        <div>
+            <a class="fixed-bottom-2 blink_me" href="tel:@telNo">HEMEN ARAYIN</a>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer id="rs-footer" class="rs-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-one mb-md-50">
+                        <div class="about-widget">
+                            <a class="logo-area scrollUp" style="cursor:pointer">
+                                <img class="logo-container lazyload"
+                                     src="@whiteLogoUrl"
+                                     alt="Mizgin Dogan Footer Logo">
+                            </a>
+                            <div class="footer-info">
+                                <p class="footer-desc white-color">
+                                    Mizgin Hukuk ve Danışmanlık, müvekkil odaklı çalışmayı ilke edinmiş
+                                    genç ve dinamik kadrosu ile müvekkillerine hukuki danışmanlık başta olmak üzere avukatlık hizmeti sağlamaktadır.
+                                </p>
+                                <p class="footer-desc white-color">
+                                    İstanbul Bakırköy' de bulunan hukuk büromuza gelmek
+                                    için lütfen randevu alınız.
+                                </p>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-two mb-md-50">
+                        <h5 class="footer-title">ÇALIŞMA SAATLERİ</h5>
+                        <p class="footer-desc white-color">
+                            <span class="sub-text">Çalışma Günleri:</span>
+                            Pazartesi - Cumartesi: @opening - @closing<br>
+                        </p>
+
+                        <p class="footer-desc white-color">
+                            <span class="sub-text">Tatil Günleri:</span>
+                            Pazar<br>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-three mb-md-50">
+                        <div class="footer-menu">
+                            <h5 class="footer-title">LİNKLER</h5>
+                            <ul>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Home" asp-action="About">Hakkımızda</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Home" asp-action="Service">Faaliyet Alanlarımız</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Home" asp-action="Team">Ekibimiz</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Blog" asp-action="BlogList">Yazılarımız</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i><a asp-controller="Home" asp-action="Contact">İletişim</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-four">
+                        <h5 class="footer-title">İLETİŞİM</h5>
+                        <ul class="footer-address">
+                            <li><i class="fa fa-map-marker"></i><span>@adress</span></li>
+                            <li><i class="fa fa-phone"></i><a href="tel:@telNo"><span>@telNoShort</span></a></li>
+                            <li><i class="fa fa-envelope-o"></i><span><a href="mailto:@mail">@mail </a>@*<a href="#">www.yourcompanyname.com</a>*@</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright text-center">
+                    <p>
+                        2019 <a href="https://obsolutions.co/"
+                                target="_blank" rel="noreferrer">OB</a> &copy; Tüm Hakları Saklıdır.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- start scrollUp  -->
+    <div id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- End scrollUp  -->
+    <!-- Search Modal Start -->
+    <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="fa fa-close"></span>
+        </button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="search-block clearfix">
+                    <form asp-controller="Blog" asp-action="BlogList">
+                        <div class="form-group">
+                            <input name="searchString" class="form-control" placeholder="Ara" type="text">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal End -->
+    <!-- modernizr js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- jquery latest version -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Menu js -->
+    <script src="~/js/rsmenu-main.js"></script>
+    <!-- op nav js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- isotope.pkgd.min js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- imagesloaded.pkgd.min js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <!-- wow js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- Skill bar js -->
+    <script src="~/js/skill.bars.jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!-- counter top js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- video js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.2.10/jquery.mb.YTPlayer.min.js"></script>
+    <!-- magnific popup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Nivo slider js -->
+    <script src="~/inc/custom-slider/js/jquery.nivo.slider.js"></script>
+    <!-- plugins js -->
+    <script src="~/js/plugins.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <!-- main js -->
+    <script src="~/js/main.js"></script>
+    <!-- Accordion -->
+    <script src="~/js/accordion.js"></script>
+    <!-- Alertify -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/alertify.min.js"></script>
+
+
+</body>
+</html>

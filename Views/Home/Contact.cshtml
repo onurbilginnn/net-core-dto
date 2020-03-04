@@ -1,0 +1,114 @@
+﻿@model mizgindogancom.ViewModels.HomeViewModel;
+
+@{
+    ViewData["Title"] = "İletişim | Mizgin Doğan Hukuk";
+}
+
+<partial name="_PartialViewBannerForHome" model="Model" />
+<div id="blog-loading-container">
+    <div id="send-mail-loading">
+        @*<img src="@Model.AllImages.ElementAt(9).Url" alt="@Model.AllImages.ElementAt(9).Name" />*@
+    </div>
+</div>
+<!--Contact Section Start-->
+<div id="rs-contact" class="rs-contact contact-section bg11 pt-100 pb-100">
+    <div class="container">
+        <div class="row contact-address-section">
+            <div class="col-md-4 mb-sm-30">
+                <div class="contact-info contact-address">
+                    <i class="fa fa-map-marker"></i>
+                    <h4>Adres</h4>
+                    <p>@Model.Info.Adress1</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-sm-30">
+                <div class="contact-info contact-phone">
+                    <i class="fa fa-phone"></i>
+                    <h4>Telefon Numarası</h4>
+                    <a href="tel:@Model.Info.Tel2">@Model.Info.Tel1</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-info contact-email">
+                    <i class="fa fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:@Model.Info.Mail2">@Model.Info.Mail2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Contact Section End-->
+<!--Contact Section Start-->
+<div class="contact-sidebar-section pt-100 pb-100">
+    <div class="container">
+        <div class="sidebar-inner">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="sider-contact">
+                        <div class="logo-area">
+                            <img class="logo-container scrollUp" src="@Model.AllImages.ElementAt(2).Url" alt="Footer Logo">
+                            </div>
+                            <div class="sidebar-text">
+                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+                            </div>
+                            <div class="sidebar-opening-hour">
+                                <h4 class="white-color mb-15">Çalışma Günleri:</h4>
+                                <ul>
+                                    <li>Pazartesi - Cumartesi: @Model.Info.OpeningTime - @Model.Info.ClosingTime</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="contact-form contact-form-one">
+                        <div id="form-messages"></div>
+                        <div id="send-mail-loading">
+                        </div>
+                        <form id="contact-form" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="İsim*" id="Name" name="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-field">
+                                        <input type="email" placeholder="E-Mail*" id="Mail" name="Mail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-field">
+                                        <input type="text" placeholder="Telefon Numarası" id="phoneNo" name="phoneNo">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-field">
+                                <textarea placeholder="Mesajınız*" rows="7" id="Message" name="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="readon">Gönder</button>
+                            </div>
+                            <div class="form-check mt-20">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox1" name="checkbox1">
+                                <label class="form-check-label" for="checkbox1" id="checkbox1Label" name="checkbox1Label">
+                                    &nbsp;<a  target="_blank" rel="noreferrer" asp-action="Privacy"><strong>Gizlilik politikası sözleşmesini</strong></a> kabul ediyorum.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Contact Section End-->
+<!-- Map Section Start -->
+<div id="rs-map" class="rs-map gmap-one">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9840.88466542534!2d28.872267441149674!3d40.99368887028533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x43d4d107dc9212c1!2zQXZ1a2F0IE1pemdpbiBEb8SfYW4gw4dFTMSwSw!5e0!3m2!1sen!2str!4v1557141740876!5m2!1sen!2str" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<!-- Map Section End -->
+
